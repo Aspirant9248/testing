@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event_1</title>
+</head>
+<body>
+    <h1>prabhat and code</h1>
+    <button id="start" class="start">start</button>
+    <button id="button" class="button">stop</button>
+    
+</body>
+<script>
+   /*  setTimeout(function(){
+        console.log("hello prabhat")
+    },3000);// yee baas ek time work karta haii
+
+    const fun=function(){
+        console.log("one day you become a great coder");
+    }
+    setTimeout(fun,4000)// another method to use setTimeout function
+
+    const New=function(){
+        document.querySelector('h1').innerHTML="Hii you got the right track"
+    }
+   const stop= setTimeout(New,4000)// iske use see naa aap page kaa text change kaar saktee haiii
+   // aaye aab sikhte hai kii kaiise button ki madad se kaam ko roke
+  document.querySelector('#button').addEventListener('click',function(){
+    clearTimeout(stop);
+    console.log("work stopped");
+  });   */
+
+// setInterval(function(){
+   // console.log("i love india",Date.now());
+//},9000)
+const hitesh=function(){
+    console.log("i love india",Date.now());
+ }
+  const alpha=setInterval(hitesh,1000);
+  document.querySelector('#button').addEventListener('click',function(){
+    clearInterval(alpha);
+  })
+  document.querySelector('#start').addEventListener('click',function(){
+    setInterval(hitesh,1000);
+  })
+
+
+
+
+</script>
+</html>

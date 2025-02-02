@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>TO DO list</h1>
+        <br>
+        <input type="text" id="input">
+        <button id="click">click Me</button>
+        <div class="div"></div>
+    </center>
+</body>
+<script>
+    let a=document.getElementById("input")
+    let b=document.getElementById("click")
+    let c=document.querySelector(".div")
+
+
+     const random=()=>{
+        console.log(a.value)
+    
+    let n=document.createElement('li')
+        n.textContent=a.value 
+        console.log(n)
+        c.append(n)
+        a.value="";
+
+     }
+
+    b.addEventListener('click',()=>{
+        random();
+    })
+
+    c.addEventListener('click',(event)=>{
+        console.log(event.target)// click karenge print in co nsole directly 
+        
+
+       let remove=event.target// yiska use hatane kee liye
+       remove.remove();
+
+    })
+</script>
+</html>

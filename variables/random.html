@@ -1,0 +1,278 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" class="a" placeholder="a">
+    <br>
+    <input type="text" id="b" class="b" placeholder="b">
+    <br>
+    <button  id="button">sum</button>
+    <br>
+    <input type="text" id="sum" class="sum" placeholder="sum">
+    <div id="result"></div>
+    </body>
+    <script>
+        function add(){
+            const a=document.querySelector('#a').value;
+            const A=parseInt(a);
+            const b=document.querySelector('#b').value;
+            const B=parseInt(b);
+            console.log(A);
+            console.log(B);
+            console.log(A+B);
+            const alpha=A+B
+            return alpha;
+    
+        }        
+        const sum=document.querySelector("#sum");
+         const result=document.querySelector("#result");                                                                                                                                                                                                                 
+         
+        const button=document.querySelector('#button')
+        button.addEventListener('click',function(){
+         sum.value= add();
+           result.innerHTML=`your sum is:${add()} thankyou for visiting:`
+        
+      })
+    </script> 
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your detail</title>
+    <style>
+        .name{
+            color:green;
+        }
+        .edu{
+            color:blue;
+        }
+        .aim{
+            color:yellowgreen;
+        }
+        .dis{
+            color:orange;
+        }
+        .vill{
+            color:blue;
+        }
+        .age{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>your detail</legend>
+   <input type="text"  id="name" class="name" placeholder="name">
+   <br><br>
+   <input type="text" id="edu" class="edu" placeholder="edu"><br><br>
+   <input type="text" id="vill" clas="vill" placeholder="vill"><br><br>
+   <input type="text" id="dist" class="dist" placeholder="dist"><br><br>
+   <input type="text" id="age" class="age" placeholder="age"><br><br>
+   <input type="text" id="hobby" class="hobby" placeholder="hobby"><br><br>
+   <input type="text" id="collage" class="hobby" placeholder="collage"><br><br>
+   <input type="text" id="branch" class="hobby" placeholder="branch"><br><br>
+   <input type="text" id="aim" class="aim" placeholder="aim"><br><br>
+</fieldset>
+    <button id="button">button</button>
+  <div id="output"></div>
+</body>
+<script>
+    function detail(){
+        const name=document.querySelector('#name').value
+        const edu=document.querySelector('#edu').value
+        const vill=document.querySelector('#vill').value
+        const dist=document.querySelector('#dist').value
+        const hobby=document.querySelector('#hobby').value
+        const age=document.querySelector('#age').value
+        const Age=parseInt(age);
+        const aim=document.querySelector('#aim').value
+        const collage=document.querySelector('#collage').value
+        const branch=document.querySelector('#branch').value
+        const result=`Hello everyone my name is  ${name}  currentlly i am purshing by ${edu} degree from ${collage} engineering colleage .my branch name is ${branch} 
+        i belongs to a small village ${vill} in ${dist} distic .${dist} is famous for his cultural heritage
+        .i am ${Age} year old .my hobby is ${hobby} and my ambition of life is to achieve ${aim} and seve for nation.`
+        console.log(Age);
+        return result;
+    }
+    const output=document.querySelector('#output')
+    const button=document.querySelector('#button')
+    button.addEventListener('click',function(){
+       output.innerHTML= detail();
+
+
+    });
+</script>
+</html>      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3"><input type="text"></td>
+            <td>c</td>
+    </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>/</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>*</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>.</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>+</td>
+            <td>-</td>
+            <td>=</td>
+        </tr>
+    </table>
+</body>
+</html>     
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+    td{
+        border:2px solid black;
+    }
+</style>
+<body>
+   
+    <table>
+        <tr>
+            <h1> table practice</h1>
+            <td rowspan="2"></td>
+            <td colspan="2">average</td>
+            
+            <td rowspan="2">redeye</td>
+        </tr>
+        <tr class="ren">
+            
+            
+            <td>height</td>
+            <td>weight</td>
+        </tr>
+        <tr class="ren">
+            <td>male</td>
+            <td>1.9</td>
+            <td>0.003</td>
+            <td>40%</td>
+        </tr>
+        <tr class="ren">
+            <td>female</td>
+            <td>1.7</td>
+            <td>0.002</td>
+            <td>43%</td>
+        </tr>
+    </table>
+</body>
+</html>      --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td{
+         padding:0px;
+        border:2px solid black;
+         text-align:center;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+</style>
+<body>
+    <table class="table">
+        <tr class="table">
+            <td rowspan="3">day</td>
+            <td colspan="3">seminar</td>
+           
+        </tr>
+        <tr class="table">
+           
+            <td colspan="2">schedule</td>
+           
+            <td rowspan="2">topic</td>
+        </tr>
+        <tr class="table">
+            
+            
+            <td>begin</td>
+            <td>end</td>
+        </tr>
+        <tr class="table">
+            <td rowspan="2">monday</td>
+            <td rowspan="2">8:00</td>
+            <td rowspan="2">5:00</td>
+            <td>introduction to XML</td>
+        </tr>
+        <tr class="table">
+           
+           
+            
+            <td>validity:DTD and Relax NG</td>
+        </tr>
+        <tr class="table">
+            <td rowspan="3">tuesday</td>
+            <td>8:00</td>
+            <td>11:00</td>
+            <td rowspan="2">x Path</td>
+        </tr>
+        <tr class="table">
+           
+           
+            <td>11:00</td>
+            <td>2:00</td>
+        </tr>
+        <tr class="table">
+            
+            <td>2:00</td>
+            <td>5:00</td>
+            <td>xSL transformation</td>
+        </tr>
+        <tr class="table">
+            <td>wednesday</td>
+            <td>8:00</td>
+            <td>12:00</td>
+            <td>XSL formatting objects</td>
+        </tr>
+    </table>
+</body>
+</html>    
+

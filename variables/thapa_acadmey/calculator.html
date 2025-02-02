@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock </title>
+    <style>
+        .coloumn{
+             text-align:center;                                                    
+            border:2px solid black;
+            margin: 2px;
+            background-color: rgb(103, 153, 103);
+        }
+    </style>
+   
+</head>
+<body>
+    <center>
+     <h1>calculator</h1>     
+<table>
+    <tr class="row">
+        <td class="coloumn" colspan="3">
+         <input type="text" id="result" style="background-color:rgb(243, 243, 81)" ></td>        
+         <td class="coloumn" id="clear" onclick="result.value=''">C</td>
+    </tr>
+    <tr class="row">
+        <td class="coloumn" id="1" onclick="result.value+=1" style="text-align:center">1</td>        
+        <td class="coloumn" id="2" onclick="result.value+=2">2</td>
+        <td class="coloumn" id="3" onclick="result.value+=3">3</td>
+        <td class="coloumn" id="add" onclick="result.value+='+'">+</td>
+    </tr>
+    <tr class="row">
+        <td class="coloumn" id="4"  onclick="result.value+=4">4</td>        
+        <td class="coloumn" id="5" onclick="result.value+=5">5</td>
+        <td class="coloumn" id="6"  onclick="result.value+=6">6</td>
+        <td class="coloumn" id="subtract"  onclick="result.value+='-'">-</td>
+    </tr>
+    <tr class="row">
+        <td class="coloumn" id="7"  onclick="result.value+=7">7</td>        
+        <td class="coloumn" id="8" onclick="result.value+=8">8</td>
+        <td class="coloumn" id="9" onclick="result.value+=9">9</td>
+        <td class="coloumn" id="multiple"  onclick="result.value+='*'">*</td>
+    </tr>
+    <tr>
+        <td class="coloumn" id="" onclick="result.value+=0">0</td>
+        <td class="coloumn" id="" onclick="result.value+='.'">.</td>
+        <td class="coloumn" id="equal" onlick="alpha()">=</td>
+        <td class="coloumn" id="" onclick="result.value+='/'">/</td>
+    </tr>
+</table>
+</center>
+</body>
+<script>
+    const result = document.querySelector('#result')
+    
+    function alpha(){
+        console.log("you are clicked")
+        result.value=eval(result.value);
+    }
+
+     const  equal=document.getElementById('equal');
+     equal.addEventListener('click',function(){
+      alpha(); 
+      } )
+    
+
+    
+    
+</script>
+</html>

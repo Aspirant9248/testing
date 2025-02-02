@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counting_number</title>
+    <style>
+        body{
+    
+            display:flex;
+            
+        }
+        .count{
+    border:3px solid black;
+    display:flex;
+    height: 50px;
+    width:50px;
+    font-size: 30px;
+    text-align:center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <center>
+    <button id="plus" class="plus">+ve</button>
+    <div id="count" class="count">0</div>
+    <button id="minse" class="minse">-ve</button>
+</center>
+</body>
+<script>
+   const prabhat= document.getElementById('count');
+   prabhat.style.backgroundColor="red";
+   prabhat.innerText="0";
+   const plus=document.getElementById('plus');
+   plus.addEventListener('click',function(e){
+     prabhat.innerText++;
+     console.log(innerText);
+   })
+   
+   
+    const minse=document.getElementById('minse');
+   minse.addEventListener('click',function(p){
+     prabhat.innerText--;
+     console.log(innerText);   
+   
+   })
+
+</script>
+</html>

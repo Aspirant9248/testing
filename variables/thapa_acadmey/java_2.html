@@ -1,0 +1,1027 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manuplaction</title>
+</head>
+<body>
+    <head>
+    <div class="day">monday</div>
+    <div class="day">tuesday</div>
+    <div class="day">wednesday</div>
+    <div class="day">thursday</div>
+   </div>
+</body>
+<script>
+    const x=document.querySelector('.parent')
+  console.log(x)
+   console.log(x.children)
+   console.log(x.children[1])
+   console.log(x.children[1].innerHTML="prabhat") 
+  
+   for(let i=0;i<=x.children.leng;i++){// to print the hole day using for loop
+    console.log(x.childern[i].innerHTML);
+   }
+   x.children[1].style.color="orange";
+   console.log(x.firstElementChild)// for first element
+   console.log(x.lastElementChild)// for access last element
+   const dayone=document.querySelector('.day')
+   console.log(dayone.parentElement)
+   console.log(dayone.nextElementSibling)
+   console.log(x.childNode)
+</script>
+</html>  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/* const div=document.createElement('div')
+console.log(div);
+div.setAttribute('class','firstdiv')
+div.id=Math.round(Math.random()*10+1)
+//div.innerText="prabhat ranjan"
+div.style.backgroundColor="green";
+//div.setAttribute('textNode','prabhat')
+const addText=document.createTextNode("chai")
+const z=div.appendChild(addText);
+
+document.body.appendChild(div)  */
+</script>
+</html>      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+   <ul class="ul">
+    <li>javasript</li>
+    
+   </ul> 
+</body>
+<script>
+  function addlang(language){
+    const li=document.createElement('li')
+    li.innerHTML=`${language}`
+    const x=document.querySelector('.ul')
+    x.appendChild(li);
+    
+  } 
+  addlang("python")
+  addlang("java")
+  addlang("typeScript")  
+
+  // method two to add list
+
+  function addlang(language){
+    const li=document.createElement('li')
+    li.appendChild(document.createTextNode(language))
+    document.querySelector('.ul').appendChild(li)
+  }
+  addlang("python")
+  addlang("javaScript")
+  addlang("typescript")
+</script>
+</html>         
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(language){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.ul').appendChild(li)
+      }
+      addlang("python")
+      addlang("javaScript")
+      addlang("typescript")
+    // edit element
+    const second=document.querySelector("li:nth-child(2)")
+    //second.innerHTML="mojo" 
+    const newli=document.createElement('li')
+    newli.textContent='mojo'
+    second.replaceWith(newli);
+// edit Method 2
+const first=document.querySelector("li:first-child")
+first.outerHTML='<li>prabhat</li>'
+
+// remove
+
+const last=document.querySelector('li:last-child')
+last.remove();
+</script>
+</html>      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul">
+        <li>python</li>
+    </ul>
+</body>
+<script>
+    function addlang(language){
+       /* const li=document.createElement('li')
+        li.innerHTML=`${language}`
+        document.querySelector('.ul').appendChild(li) */
+
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(language))
+        document.querySelector('.ul').appendChild(li)
+        
+        const second=document.querySelector("li:nth-child(2)")
+        //second.innerHTML="mojo"
+        const newli=document.createElement('li')
+        newli.textContent="prabhat"
+        second.replaceWith(newli)
+        
+        const first=document.querySelector("li:first-element")
+        first.outerHTML='<li>hello bkl</li>'
+        const last=document.querySelector('li:last-child')
+        last.remove();
+
+    }
+    addlang("javaScript")
+    addlang("rubby")
+    addlang("html")
+</script>
+</html>
+             
+
+// background color changer
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <button id='yellow' class="button">yellow</button>
+    <button id='green'  class="button">green</button>
+ </body>
+ <script>
+    const button=document.querySelectorAll(".button")
+    const body=document.querySelector('body')
+    button.forEach(function(button){
+               console.log(button);
+               button.addEventListener('click',function(e){
+                           console.log("click")
+                           console.log(e.target)
+                if(e.target.id==="green"){
+                    body.style.backgroundColor="green"
+                }
+                if(e.target.id==='yellow'){
+                    body.style.backgroundColor="yellow"
+                }
+
+               });
+    });
+ </script>
+ </html>   
+ 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+ </head>
+ <body>
+    <form action="">
+        <input type="text" id="height" placeholder="height">
+        <br>
+        <input type="text" id="weight" placeholder="weight"><br>
+        <button>calaculate</button><br>
+        <div id="result"></div>
+        <div id="weight-guide"></div>
+    </form>
+ </body>
+ <script>
+   const form= document.querySelector('form')
+
+   form.addEventListener('submit',function(e){
+             e.preventDefault()
+             const height=parseInt(document.querySelector('#height').value)
+             const weight=parseInt(document.querySelector("#weigth").value)
+             const result=document.querySelector("#result")
+             const bmi=(weight/((height*height)/10000)).toFixed(2)
+             result.innerHTML=`<span>${bmi}</span>`
+   });
+ </script>
+ </html>      
+
+ //  add two number
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+ </head>
+ <body>
+   <input type="text" id="first" placeholder="a">
+   <input type="text" id="second" placeholder="b">
+   <button onclick="add()">add</button>
+   <button id="submit">add</button>
+   <input type="text" id="answer">
+      
+   
+ </body>
+ <script>
+  function add(){
+    var num1,num2,sum;
+    num1=parseInt(document.getElementById("first").value)
+    num2=parseInt(document.getElementById("second").value)
+    sum=num1+num2;
+    document.getElementById("answer").value=sum;
+  }
+  const button=document.getElementById('submit')
+  button.addEventListener('click',function(){
+    add();
+  })
+ </script>
+ </html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product</title>
+</head>
+<body>
+ 
+  <input type="text" id="a">
+  <input type="text" id="b">
+  <button id="submit">product</button>
+  <input id="result">
+ 
+</body>
+<script>
+  function product(){
+        var a,b,result;
+         a=parseInt(document.querySelector('#a').value)
+         b=parseInt(document.querySelector('#b').value);
+         result=a*b;
+        document.getElementById('result').value=result
+  }
+   const button=document.querySelector('#submit')
+   button.addEventListener('click',function(){
+    product();
+   });
+
+</script>
+</html>
+
+
+// area of circle
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>area_circle</title>
+  <style>
+  .{
+    margin:0;
+    padding:0;
+  }
+   #h1{
+    color: aqua;
+    margin:30px;
+    
+   }
+   #id{
+    margin:30px;
+   
+   }
+   #r{
+    margin:30px;
+    margin-top: 0%;
+    height:35px;
+    width:200px;
+    border-radius: 15px;
+    text-align: center;
+    border:3px solid green;
+    font-size: large;
+   }
+  #result{
+    margin:30px;
+   margin-top: 0%;
+    height:35px;
+    width:200px;
+    border-radius: 15px;
+    text-align: center;
+    border:3px solid green;
+    font-size: large;
+   }
+
+   #button{
+    margin:30px;
+   margin-top: 0%;
+    height:35px;
+    width:200px;
+    border-radius: 15px;
+    text-align: center;
+    border:3px solid green;
+    font-size: large;
+   }
+</style>
+ </head>
+ <body>
+  <center>
+    <h1 id="h1">AREA of CIRCLE</h1>
+    <h2><label for="">RADIUS</label></h2>
+    <input type="text" id="r">
+    <br>
+    <button calculate id="button">calculate</button>
+    <br>
+    <h2><label for="">Area of circle</label></h2>
+    <div id="result"></div>
+
+  </center>
+ </body>
+ <script>
+ function area(){
+      var r,result;
+    r=parseInt(document.querySelector('#r').value)
+    result=(3.14*r*r).toFixed(2);
+    document.querySelector('#result').value=result;
+ }
+  const button=document.querySelector("#button")
+  button.addEventListener('click',function(){
+  
+    area();
+  })
+</script>
+ </html>                        
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clock</title>
+  <style>
+    #clock{
+       margin:30px;
+       margin-top: 0%;
+       height:35px;
+       width:200px;
+       border-radius: 15px;
+       text-align: center;
+       font-size: xx-large;
+       font-style: italic;
+       border:3px solid green; 
+    }
+    #h1{
+      font-style: italic;
+    }
+  </style>
+ </head>
+ <body>
+  <center>
+    <h1 id="h1">CLOCK by prabhat</h1>
+     <div id="clock"></div>
+    </center>
+ </body>
+ <script>
+  const clock=document.querySelector('#clock');
+  let value =setInterval(function(){
+    let date=new Date()
+    clock.innerHTML=date.toLocaleTimeString() 
+  },1000);
+  
+
+ </script>
+ </html>
+  
+
+
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="a" placeholder="a">
+  <input type="text" id="b" placeholder="b">
+
+  <button id="button">click</button>
+  <input type="text" id="c" placeholder="result">
+</body>
+<script>
+  function sum(){
+  var a,b,c,result;
+  a=parseInt(document.querySelector("#a").value)
+  b=parseInt(document.querySelector("#b").value)
+  result=a+b;
+  document.querySelector("#c")
+  .value=result;
+  }
+   const button=document.querySelector("#button")
+   button.addEventListener('click',function(){
+    sum();
+   })
+</script>
+</html>  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>guess game</title>
+  <style>
+    #random{
+      border:2px solid pink;
+      border-radius:6px;
+      display:flex;
+      height:30px;
+      width:150px;
+      align-items: center;
+      justify-content: center;
+
+    }
+    #result{
+      border:2px solid pink;
+      border-radius:6px;
+      display:flex;
+      height:30px;
+      width:150px;
+      align-items: center;
+      justify-content: center;
+    }
+    #final_answer{
+      color:brown;
+    }
+    #a{
+      border:2px solid pink;
+      border-radius:6px;
+      display:flex;
+      height:30px;
+      width:150px;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1 style="color:red"> Gambling design by mrs priyanshu d_aman</h1>
+    <h2>your input must shoud be between 1 to 10 only</h2>
+  <label for="">input:</label>
+  <br>
+  <input type="text" id="a" placeholder="a">
+  
+ 
+  <input type="text" id="b" placeholder="result">  
+  <button id="button">click</button>
+  <br>
+  <label for="">random:</label>
+  <div id="random" placeholder="random"></div>
+  <br>
+  <label for="">result:</label>
+  <div id="result" placeholder="result"></div>
+  <br>
+  <div id="final_answer"></div>
+</center>
+</body>
+<script>
+  function num(){
+    var a,b,result;
+    a=parseInt(document.querySelector('#a').value)
+    //document.querySelector('#b').value=a;
+     var random=parseInt(Math.random()*10+1)
+      document.querySelector('#random').innerHTML=random;
+    //console.log(random)
+     result=document.querySelector('#result')
+    if(a===random){
+      result.innerHTML="congrates you chose the right number"
+    }else  result.innerHTML="Not matched"
+  }
+  let count=0;
+  let final=document.querySelector('#final_answer')
+  const button=document.querySelector("#button")
+  button.addEventListener('click',function(){
+    count++;
+    if(count<=10 || result.innerHTML=="congrates you chose the right number"){num();
+    final.innerHTML=` remainig chance:${10-count}`
+    }
+    else  final.innerHTML="sorry!! game over"
+  })
+</script>
+</html>    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image_click</title>
+</head>
+<body>
+  <img id='photo' src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG" alt="saadi" height="300px" width="200px" onclick="alert('you are in danger $%#@')" >
+</body>
+<script>
+  document.querySelector('#photo').onclick=function(){
+    alert('your are coll..')
+  }
+  document.querySelector('#photo').addEventListener('click',function(){
+    alert('you have a different fan base broo.....!')
+  })
+</script>
+</html>      
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="image" id="image">
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      </li>
+      
+    </div>
+  </body>
+  <script>
+    
+   let image= document.getElementById('image')
+   image.addEventListener('click',function(e){
+    console.log("body ");
+   },false)
+   let shaddi=document.getElementById('shaddi')
+   shaddi.addEventListener('click',function(e){
+      e.preventDefault()
+      e.stopPropagation()
+      console.log('image is clicked');
+    
+   },false)
+  </script>
+  </html>         
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove photos on click</title>
+  </head>
+  <body>
+    <div class="image" id="image">
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      <li><img
+        src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG"
+        class="img-fluid rounded-top"
+        alt="shaddi"  id="shaddi"  height="150px" width="150px"
+      />
+      </li>
+      
+    </div>
+  </body>
+  <script>
+    let img=document.querySelector('#image')
+     img.addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        let gayab=e.target.parentNode
+        gayab.remove();
+    })
+
+  </script>
+  </html>
+
+  
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTme_out</title>
+   </head>
+   <body>
+    <h1>chai aur code</h1>
+    <button id="stop">STOP</button>
+
+   </body>
+   <script>
+    const change=function(){
+      document.querySelector('h1').innerHTML="prabhat you are a great personality"
+    }
+     const stop=setTimeout(change,5000);
+    const prabhat=function(){
+      console.log("prabhat_ranjan");
+    }
+    setTimeout(prabhat,3000); // kitne time baad excicute karana haii
+  document.querySelector('#stop').addEventListener('click',function(){
+      clearTimeout(stop);
+      console.log("stopped");
+  
+  })
+
+   </script>
+   </html>
+
+   
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>alpha</title>
+    </head>
+    <body>
+      <button id="start">START</button>
+      <button id="stop">STOP</button>
+      
+    </body>
+    <script>
+
+      const name=function(){
+        console.log("Hi prabhat")
+      }
+       const alpha=setInterval(name,1000)
+     const stop= document.querySelector('#stop')
+     stop.addEventListener('click',function(){
+          clearTimeout(alpha)
+     })
+     const start= document.querySelector('#start')
+     start.addEventListener('click',function(){
+      setInterval(name,1000);
+
+     })
+    </script>
+    </html>
+
+     
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" , initial-scale=1.0">
+      <title>color_changer</title>
+     </head>
+     <body>
+      <button id="start">START</button>
+      <button id="stop">STOP</button>
+     </body>
+     <script>
+     const beta=function(){
+      const alpha="abcdef1234567890"
+      let rgb="#"
+      for(let i=0;i<6;i++){
+        let random= alpha[Math.round(Math.random()*10)]
+        rgb+=random
+      }
+      return rgb;
+    }
+      console.log(beta());
+
+      const dual=setInterval(color_change,1000)
+
+     function color_change(){      
+
+      document.body.style.backgroundColor=beta();
+    
+     }
+    
+    document.querySelector('#stop').addEventListener('click',function(){
+             
+               clearTimeout(dual);   
+    })
+    document.querySelector('#start').addEventListener('click',function(){
+           
+         setInterval(color_change,1000);
+                
+    })
+    
+      
+      
+     </script>
+     </html>  
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+     </head>
+     <body>
+      
+     </body>
+     <script>
+      const url="https://www.instagram.com/?hl=en#"
+      const xhr=new XMLHttpRequest();
+      xhr.open('GET',url)
+      xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+          const data=JSON.parse(this.responseText)
+          console.log(typeof data);
+          console.log(data.followers);
+        }
+      }
+      xhr.send();
+     </script>
+     </html>      
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ticket</title>
+      <style>
+        #div{
+          border:2px solid black;
+          border-radius:5px;
+        
+          
+        }
+        .outprice{
+            
+          display:flex;
+          border:2px yellow solid;
+          border-radius:5px;
+          
+
+
+
+        }
+      </style>
+     </head>
+     <body>
+      <div id="div">
+        <h3 styel="color:blue">enter your details</h3>
+    
+        <input type="text" id="name" placeholder="name">
+        <br><br>
+        <input type="date" id="date" placeholder="date"><br><br>
+        <input type="number" id="number" placeholder="mobile"><br><br>
+        <input type="text" id="password" placeholder="password"><br><br>
+        <input type="text" id="from" placeholder="from">        
+        <input type="text" id="to" placeholder="to">
+        <br><br>
+        <input type="text" id="price" placeholder="price">
+
+      </div>
+       
+       <button id="print">Print</button>
+       <h1 style="color:red">ticket to heel</h1>
+       <div id="div">
+        <input type="text" id="outname">
+        
+        <br><br>
+        <input type="date" id="outdate"><br><br>
+        <input type="number" id="outnumber"><br><br>
+        <input type="text" id="outpassword" class="outpassword"><br><br>
+        <div id="destination"></div>
+
+        <div id="outprice"></div>
+       
+       </div>
+      
+     </body>
+     <script>
+      
+      
+     const button=document.querySelector('#print')
+     const outname=document.querySelector('#outname')
+     button.addEventListener('click',function(){
+     const name=document.querySelector('#name')
+        const alpha=name.value
+        outname.value=alpha
+        const date=document.querySelector('#date').value
+        const number=document.querySelector('#number').value
+        const password=document.querySelector('#password').value
+        const from=document.querySelector('#from').value
+        const to=document.querySelector('#to').value
+        const price=document.querySelector('#price').value
+        const total=price*12
+        
+       
+
+        const beta=document.querySelector('#outdate').value=date;
+        const gamma=document.querySelector('#outnumber').value=number;
+        const delta=document.querySelector('#outpassword').value=password;
+        const destination=document.querySelector("#destination").innerHTML=`${from} to ${to}`
+         document.querySelector('#outprice').innerHTML=`price:${total}`
+       
+      
+      })
+     </script>
+     </html>     
+
+// binding concept
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>binding</title>
+</head>
+<body>
+  <button id="button"> click me</button>
+  <script>
+    class react{
+      constructor(){
+          this.library="react"
+          this.server="https://localhost:300"
+          // requirement
+          document
+          .querySelector('button')
+          .addEventListener('click',this.handleClick.bind(this))
+      }
+      handleClick(){
+          console.log("button clicked");
+          console.log(this);
+      }
+  }
+  </script>
+</body>
+</html>
+
+
+      
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       </head>
+       <body>
+        
+       </body>
+       <script>
+        function outer(){
+          let username="hitesh"
+          function inner(){
+              let secret="my123"
+              console.log("inner",username);
+          }
+          function innerTwo(){
+            console.log("innerTwo",username);
+            console.log(secret)
+          }
+    inner()
+    innerTwo()
+    
+    }
+    outer();
+    console.log(username);
+    
+       </script>
+       </html>     
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       </head>
+       <body>
+        
+       </body>
+       <script>
+        function makefun(){
+          const name="mozilla";
+          function display(){
+            console.log(name);
+          }
+          return display
+        }
+        const myfunc=makefun()
+        myfunc();
+       </script>
+       </html>          -->
+
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       </head>
+       <body>
+        <button id="orange">orange</button>
+        <button id="green">green</button>
+       </body>
+       <script>
+        /* document.querySelector('#orange').onclick=function(){
+          document.body.style.backgroundColor="orange"
+        }
+        document.querySelector('#green').onclick=function(){
+          document.body.style.backgroundColor="green"
+        } */
+        function clickHandler(color){
+          return function(){
+            document.body.style.backgroundColor=`${color}`
+          }
+        }
+        document.getElementById('orange').onclick=clickHandler("orange")
+       </script>
+       </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       

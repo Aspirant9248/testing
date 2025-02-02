@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event_script</title>
+</head>
+<body>
+    <div>
+        <un id="photo">
+            <li id="saadi">
+                  <img src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG" alt="saadi" width="150px" height="150px" onclick="alert('prabaht king in the frame guys')">
+            </li>
+            <li id="saadi1">
+                <img src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG" alt="saadi" width="150px" height="150px">
+          </li>
+          <li id="saadi2">
+            <img src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG" alt="saadi" width="150px" height="150px">
+        </li>
+        <li id="saadi3">
+            <img src="C:\Users\ysidd\OneDrive\Desktop\java_script\variables\Event\DSC_0332.JPG" alt="saadi" width="150px" height="150px">
+        </li>
+        </un>
+    </div>
+</body>
+<script>
+    /* document.getElementById('saadi1').onclick=function(){
+        alert('we use alternate way to show alert message')
+    }
+    document.getElementById('saadi2').addEventListener('click',function(){
+        alert('this is third approch to event acess')
+    })
+    document.getElementById('saadi3').addEventListener('click',function(e){
+        console.log(e)
+        },false)  
+
+        document.getElementById('photo').addEventListener('click',function(e){
+            console.log('ul is clicked')
+            },false) 
+            document.getElementById('saadi3').addEventListener('click',function(e){
+                console.log("li is clicked or worked first")
+                },false) // iss case me lick pahle andar wala firr bahar wala like ballon inside ballon 
+
+                document.getElementById('photo').addEventListener('click',function(e){
+                    console.log('ul is clicked')
+                    },true) 
+                    document.getElementById('saadi3').addEventListener('click',function(e){
+                        console.log("li is clicked or worked first")
+                        },true)   // is case me pahle top se buttom jata haiii
+                        
+                        document.getElementById('saadi3').addEventListener('click',function(e){
+                            console.log("li is clicked or worked first")
+                            e.stopPropagation()
+                            },true) // it just use to stop some task   */
+                            
+     document.querySelector('#photo').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        console.log(e.target.parentNode);
+        let removeIt=e.target.parentNode;
+        removeIt.remove();
+     },false)                       
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <button id="btn1">btn1</button>
+
+</body>
+<script>
+  let ran="0123456789abcdef"
+    let color="#"
+  const hexvalue=()=>{
+    for(var i=0;i<6;i++){
+    color=color+ran[(Math.floor(Math.random()*16))];
+    }
+    return color;
+  }
+  
+
+const handlebutton1=()=>{
+  const z=hexvalue();
+  console.log(z);
+}
+btn1.addEventListener("click",handlebutton1)
+
+ </script>
+</html>   -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>otp_generator</title>
+</head>
+<style>
+  
+  .btn{
+    border:3px black solid;
+    border-radius:25px;
+    background-color: rgb(132, 132, 172);
+    display:flex;
+    font-size:30px;
+    font-weight: bold;
+  }
+ 
+
+</style>
+<body>
+<center>
+  <div >
+    <button class="btn" onclick="otp()">generate otp </button>
+  </div>
+  <h1 id="top">OTP</h1>
+</center>
+  
+
+</body>
+<script >
+  otp =()=>{
+    var digit="0123456789";
+    var OTP="";
+    for(var i=0;i<4;i++){
+      OTP=OTP+digit[Math.floor(Math.random()*10)];
+    }
+    document.getElementById("top").innerHTML=OTP;
+  }
+  
+</script>
+
+</html>

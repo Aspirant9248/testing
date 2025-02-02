@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color_change</title>
+</head>
+<body>
+     <style>
+        .container{
+            display:flex;
+            
+            width:500px;
+            justify-content: center;
+        }
+        .button{
+            
+            border:2px solid black;
+            padding:20px;
+            gap:10px;
+            border-radius:3px;
+            height:60px;
+            width:60px;
+        }
+        #grey{
+            background-color: grey;
+           
+        }
+        #grey:hover{
+            background-color: rgb(250, 246, 246);
+            width:62px;
+            height:62px;
+            transition-duration:2s;
+           
+        }
+        #black{
+            background-color: rgb(0, 0, 0);
+          
+        }
+        #black:hover{
+            background-color: rgb(80, 75, 75);
+            width:62px;
+            height:62px;
+            transition-duration:2s;
+          
+        }
+        #red{
+            background-color: red;
+           
+        }
+        #red:hover{
+            background-color: rgb(90, 31, 31);
+            width:62px;
+            height:62px;
+            transition-duration:2s;
+           
+        }
+        #yellow{
+            background-color: yellow;
+        } 
+        #yellow:hover{
+           /* background-color: rgb(188, 188, 74);
+            transform: scaleY(1.5);*/
+            opacity:0.6;
+            width:62px;
+            height:62px;
+            transition-duration:2s;
+        } 
+    </style>
+    <center> 
+    <h1>color changer button</h1>
+    <div class="container">  
+   
+ 
+   
+    <span class="button" id="grey"></span>
+    <span class="button" id="black"></span>
+    <span class="button" id="red"></span>
+    <span class="button" id="yellow"></span>
+</div>
+
+    <h2> thank for visiting</h2>
+</center>
+
+<script>
+    const buttons=document.querySelectorAll('.button');
+    const body=document.querySelector('body');
+    buttons.forEach(function(button){
+        button.addEventListener('click',function(e){
+            console.log(button);
+            console.log(e);
+            console.log(e.target);
+            if(e.target.id==='grey'){
+                body.style.backgroundColor=e.target.id;
+              // body.style.backgroundColor='yellow';
+              
+            }    
+            if(e.target.id==='black'){
+                body.style.backgroundColor=e.target.id;
+            }    
+            if(e.target.id==='red'){
+                body.style.backgroundColor=e.target.id;
+            }    
+            if(e.target.id==='yellow'){
+                body.style.backgroundColor=e.target.id;
+            }    
+        });
+    });
+</script>
+</body>
+</html>
